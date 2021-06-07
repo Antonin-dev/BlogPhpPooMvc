@@ -1,6 +1,7 @@
 <?php
-require '../dao/Database.php';
-require '../config/Config.php';
+
+require_once '../dao/Database.php';
+require_once '../config/Config.php';
 
 var_dump($_GET);
 
@@ -29,5 +30,5 @@ class SaveDatabase{
 $bdd = Database::getDatabase();
 $save = new SaveDatabase;
 $save->save($bdd, htmlspecialchars($_POST['prenom']),htmlspecialchars($_POST['message']), htmlspecialchars($_GET['id']));
-header('Location: http://localhost:8080/adrar2021/TD-BLOG/controller/Controller.php?route=' . $_GET['id']);
+header('Location: '.BASE_URL.'controller/Controller.php?route=' . $_GET['id']);
 

@@ -1,6 +1,8 @@
 <?php
 
 
+
+
 use TpBlog\Database\Post\DatabasePost as Post;
 use TpBlog\Database\Comment\DatabaseComment as Comment;
 
@@ -21,8 +23,9 @@ class Controller {
             require_once '../dao/DatabasePost.php';
             require_once '../dao/DatabaseComment.php';
 
-
+          
             $route = htmlspecialchars($_GET['route']);
+         
             switch ($route) {
             case '1':
                 

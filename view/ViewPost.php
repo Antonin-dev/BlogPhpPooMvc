@@ -22,7 +22,7 @@
             <h5 class="card-title"><?=$result['Title']?></h5>
             <h6 class="card-subtitle mb-2 text-muted">Ecrit par <?=$result['Author']?> le : <?=$result['CreationTimestamp']?></h6>
             <p class="card-text"><?=$result['Contents']?></p>
-            <a href="http://localhost:8080/adrar2021/TD-BLOG/controller/Controller.php?route=<?=$result['Id']?>" class="btn btn-primary">Commentaires</a>
+            <a href= "<?=BASE_URL?>controller/Controller.php?route=<?=$result['Id']?>" class="btn btn-primary">Commentaires</a>
         </div>
     </div>
 

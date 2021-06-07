@@ -21,7 +21,7 @@ foreach ($results as $result) {?>
         <h5 class="card-title"><?=$result['NickName']?></h5>
           <h6 class="card-subtitle mb-2 text-muted">Ecrit le : <?=$result['CreationTimestamp']?></h6>
           <p class="card-text"><?=$result['Contents']?></p>
-          <button class="btn btn-danger"><a href="http://localhost:8080/adrar2021/TD-BLOG/model/DeleteComment.php?delete=<?=$result['Id']?>&route=<?=$result['Post_Id']?>">Supprimer</a></button>
+          <button class="btn btn-danger"><a href="<?=BASE_URL?>model/DeleteComment.php?delete=<?=$result['Id']?>&route=<?=$result['Post_Id']?>">Supprimer</a></button>
     </div>
   </div>
 
@@ -29,9 +29,9 @@ foreach ($results as $result) {?>
 }
 ?>
 </div>
-<a href="http://localhost:8080/adrar2021/TD-BLOG/" class="btn btn-success col-12">Voir les articles</a>
+<a href="<?=BASE_URL?>" class="btn btn-success col-12">Voir les articles</a>
 <h2>Ajouter un commentaire</h2>
-<form method="POST" action="http://localhost:8080/adrar2021/TD-BLOG/model/SaveComment.php?id=<?=$result['Post_Id']?>">
+<form method="POST" action="<?=BASE_URL?>model/SaveComment.php?id=<?=$result['Post_Id']?>">
   <div class="row">
     <div class="col">
       <input type="text" class="form-control" placeholder="First name" name="prenom">
